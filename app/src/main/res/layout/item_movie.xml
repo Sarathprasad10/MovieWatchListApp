@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#C8BC9D"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Movie Poster Image -->
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Movie Poster"
+            android:scaleType="centerCrop" />
+
+        <!-- Movie Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Movie Title -->
+
+            <!-- Release Year -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="Movie Title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/yearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!-- Genre -->
+            <TextView
+                android:id="@+id/genreTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genre"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!-- Buttons for Favorites and Watched -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000E18"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <!-- Favorites Button -->
+                <Button
+                    android:id="@+id/favoritesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FF000E18"
+                    android:text="Add to Favorites"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#C8BC9D"
+                    android:textSize="16sp" />
+
+                <!-- Watched Button -->
+                <Button
+                    android:id="@+id/watchedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#FF000E18"
+                    android:text="Watched"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
